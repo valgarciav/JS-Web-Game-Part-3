@@ -6,17 +6,13 @@ function newImage(url) {
 }
 
 function move(image) {
-  image.style.position = "fixed";
-  image.style.left = left + "px";
-  image.style.bottom = bottom = "px";
-  //moving the character
-  function moveToCoordinates(left, bottom) {
-    image.style.left = left + "px";
-    image.style.bottom = bottom + "px";
-  }
-  return {
-    to: moveToCoordinates,
-  };
+  let item = newImage(url);
+  item.addEventListener("click", () => {
+    item.remove();
+    let inventoryItem = document.createElement("img");
+    inventoruItem.src = urlinventory.append(inventoryItem);
+  });
+  return item;
 }
 
 thingsThatMoveReturned.to;
@@ -27,7 +23,6 @@ function moveToCoordinates(left, bottom) {
 
 let greenCharacter = newImage("assets/green-character.gif");
 move(greenCharacter).to(100, 250);
-
 let tree = newImage("assets/tree.png");
 move(tree, 200, 450);
 let pillar = newImage("assets/pillar.png");
